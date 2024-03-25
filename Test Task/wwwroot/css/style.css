@@ -1,0 +1,106 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgb(175, 174, 174);
+    transition: all 0.5s;
+}
+
+    .sidebar header {
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        background: rgb(213, 190, 136);
+        user-select: none;
+    }
+
+    .sidebar ul a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 35px;
+        font-size: 15px;
+        color: white;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(209, 205, 205);
+        text-decoration: none;
+    }
+
+ul li:hover a {
+    padding-left: 10px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: rgb(213, 190, 136);
+    border-radius: 3px;
+}
+
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all 0.5s;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+    top: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+.section {
+    background: url(weather.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.uploadInput {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.yearInput {
+    margin-right: 20px;
+}
+
+h6{
+    color: red;
+}

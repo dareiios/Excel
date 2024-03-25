@@ -1,0 +1,38 @@
+﻿@using Test_Task.ViewModels
+@model IndexViewModel
+
+<div class="container">
+    @* if pages don't exist, pager is hidden' *@
+    @if (@Model.PageViewModel.TotalPages > 0)
+    {
+        <ul class="pagination justify-content-end">
+
+            @if (@Model.PageViewModel.CurrentPage > 1)
+            {
+
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Excel" asp-action="Index" asp-route-page="1"
+                       asp-route-year="@(Model.FilterViewModel.SelectedYear)"
+                       asp-route-month="@(Model.FilterViewModel.SelectedMonth)">Начало</a>
+                </li>
+            }
+            @for (var p = @Model.PageViewModel.StartPage; p <= @Model.PageViewModel.EndPage; p++)
+            {
+                <li class="page-item @(p == @Model.PageViewModel.CurrentPage ? "active" : "")">
+                    <a class="page-link" asp-controller="Excel" asp-action="Index"
+                       asp-route-page="@p" asp-route-year="@(Model.FilterViewModel.SelectedYear)" 
+                       asp-route-month="@(Model.FilterViewModel.SelectedMonth)">@p</a>
+                </li>
+            }
+
+            @if (@Model.PageViewModel.CurrentPage < @Model.PageViewModel.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Excel" asp-action="Index" 
+                       asp-route-page="@(@Model.PageViewModel.TotalPages)"  asp-route-year="@(Model.FilterViewModel.SelectedYear)" 
+                       asp-route-month="@(Model.FilterViewModel.SelectedMonth)">Конец</a>
+                </li>
+            }
+        </ul>
+    }
+</div>

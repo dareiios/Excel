@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+
+<center>
+
+    @if (ViewBag.Error == true)
+    {
+        <h6>Не удалось загрузить файл(ы), попробуйте снова.</h6>
+    }
+
+<h3>Выберите файл для загрузки</h3>
+
+@using (Html.BeginForm("Upload", "Excel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="uploads" multiple class="uploadInput" />
+    <br>
+    <input type="submit" value="Загрузить" />   
+}
+
+</center>
