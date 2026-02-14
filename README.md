@@ -1,19 +1,19 @@
-## Текст задания:
+## Task Description:
 
-Вам необходимо написать ASP.NET Core MVC приложение для загрузки и отображения архивов погодных условий в городе Москве. Оно должно состоять из трёх страниц:
+You need to create an ASP.NET Core MVC application for uploading and displaying weather archives for the city of Moscow. It should consist of three pages:
 
-1. Главная страница, на которой присутствует меню из двух пунктов:
-   a. Просмотр архивов погодных условий в городе Москве
-   b. Загрузка архивов погодных условий в городе Москве
-2. Страница просмотра архивов погодных условий в городе Москве. На данной странице присутствует постраничная навигация и возможность просмотра погодных условий по:
-   a. Месяцам
-   b. Годам
-3. Страница загрузки архивов погодных условий в городе Москве. На данной странице мы можем загружать архивы погодных условий в городе Москве. Архив погодных условий представляет собой файл Excel. После загрузки его необходимо разобрать и загрузить в базу данных для дальнейшего отображения на экране 2. Мы можем загружать как один файл Excel, так и несколько за раз. Если файл Excel не подлежит разбору, наше приложение не должно падать.
-4. Выложить тестовый проект на одну из следующих площадок: Github, GitFlic или Gitlab
+1.  **Home Page** with a menu containing two items:
+    a. View weather archives for Moscow
+    b. Upload weather archives for Moscow
+2.  **Weather Archives View Page** for Moscow. This page must include pagination and the ability to view weather conditions by:
+    a. Month
+    b. Year
+3.  **Weather Archives Upload Page** for Moscow. On this page, you can upload weather archives for Moscow. A weather archive is an Excel file. After uploading, it must be parsed and loaded into a database for subsequent display on page 2. You can upload either a single Excel file or multiple files at once. If an Excel file cannot be parsed, the application should not crash.
+4.  Deploy the test project to one of the following platforms: Github, GitFlic, or Gitlab.
 
-## Комментарии:
+## Comments:
 
-1. В качестве библиотеки для работы с Excel файлами рекомендуется использовать NPOI.
-2. В качестве ORM для работы с базой данных можно использовать Entity Framework Core.
-3. В качестве базы данных необходимо использовать MSSQL Server 2008 и выше, либо PostgreSQL 9 и выше.
-4. Архивы погодных условий за последние 4 года прилагается к данному задание (Название файла – Weather.Moscow.2010-2014).
+1.  It is recommended to use **NPOI** as the library for working with Excel files.
+2.  **Entity Framework Core** can be used as the ORM for database operations.
+3.  The database must be **MSSQL Server 2008** or higher, or **PostgreSQL 9** or higher.
+4.  Weather archives for the last 4 years are attached to this assignment (File name: `Weather.Moscow.2010-2014`).
